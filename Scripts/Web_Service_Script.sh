@@ -18,7 +18,7 @@ wget https://www.tooplate.com/zip-templates/2098_health.zip
 unzip 2098_health.zip
 
 #Coping the file
-sudo cp -r 2098_health.zip/*/var/www/html/
+sudo cp -r 2098_health/*/var/www/html/
 
 #Restarting the service
 sudo systemctl restart httpd
