@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Installing Dependencies
-sudo yum install wget unzip httpd -y
+sudo yum install wget unzip httpd -y > /dev/null
 
 #Start and Enable service
 sudo systemctl start httpd
@@ -12,10 +12,10 @@ mkdir -p /tmp/webfiles
 cd /tmp/webfiles
 
 #Getting the template
-wget https://www.tooplate.com/zip-templates/2098_health.zip
+wget https://www.tooplate.com/zip-templates/2098_health.zip > /dev/null
 
 #Unzipping
-unzip 2098_health.zip
+unzip 2098_health.zip > /dev/null
 
 #Coping the file
 sudo cp -r 2098_health/*/var/www/html/
@@ -24,4 +24,4 @@ sudo cp -r 2098_health/*/var/www/html/
 sudo systemctl restart httpd
 
 #Cleaning the webfiles
-rm -rf /tmp/webfiles
+rm -rf /tmp/webfiles > /dev/null
